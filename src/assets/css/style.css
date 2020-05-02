@@ -1,0 +1,125 @@
+body{
+ font-family: "Multi",sans-serif;
+ font-weight: normal;
+ font-style: normal;
+}
+
+
+.btn{background:#fff;-moz-user-select:none;text-transform:capitalize;color:#fff;cursor:pointer;display:inline-block;font-size:14px;font-weight:500;letter-spacing:1px;line-height:0;margin-bottom:0;padding:27px 44px;border-radius:0px;margin:10px;cursor:pointer;transition:color 0.4s linear;position:relative;z-index:1;border:0;overflow:hidden;margin:0}
+.btn::before{content:"";position:absolute;left:0;top:0;width:101%;height:101%;background:#00A8E2;z-index:1;border-radius:5px;transition:transform 0.5s;transition-timing-function:ease;transform-origin:0 0;transition-timing-function:cubic-bezier(0.5, 1.6, 0.4, 0.7);transform:scaleX(0);border-radius:0}
+.btn:hover::before{transform:scaleX(1);color:#fff !important;z-index:-1}
+
+.head-btn2{background:none;border:1px solid #00A8E2;color:#00A8E2}@media only screen and (min-width: 992px) and (max-width: 1199px){.head-btn2{padding:27px 34px}}.head-btn2::before{color:#fff !important}.head-btn2:hover{color:#fff}
+
+.hero{
+ background-image: url("../img/hero_rocket.png");
+ height:830px !important;
+
+}
+
+/* CSS for categories cards starts */
+
+.categories{
+background: #eee !important;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+ -webkit-transform: rotateY(0deg);
+ -moz-transform: rotateY(0deg);
+ -o-transform: rotateY(0deg);
+ -ms-transform: rotateY(0deg);
+ transform: rotateY(0deg);
+ border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+ -webkit-transform: rotateY(180deg);
+ -moz-transform: rotateY(180deg);
+ -o-transform: rotateY(180deg);
+ transform: rotateY(180deg);
+}
+
+.mainflip {
+ -webkit-transition: 1s;
+ -webkit-transform-style: preserve-3d;
+ -ms-transition: 1s;
+ -moz-transition: 1s;
+ -moz-transform: perspective(1000px);
+ -moz-transform-style: preserve-3d;
+ -ms-transform-style: preserve-3d;
+ transition: 1s;
+ transform-style: preserve-3d;
+ position: relative;
+}
+
+.frontside {
+ position: relative;
+ -webkit-transform: rotateY(0deg);
+ -ms-transform: rotateY(0deg);
+ z-index: 2;
+ margin-bottom: 30px;
+}
+
+.backside {
+ position: absolute;
+ top: 0;
+ left: 0;
+ background: white;
+ -webkit-transform: rotateY(-180deg);
+ -moz-transform: rotateY(-180deg);
+ -o-transform: rotateY(-180deg);
+ -ms-transform: rotateY(-180deg);
+ transform: rotateY(-180deg);
+ -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+ -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+ box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+ -webkit-backface-visibility: hidden;
+ -moz-backface-visibility: hidden;
+ -ms-backface-visibility: hidden;
+ backface-visibility: hidden;
+ -webkit-transition: 1s;
+ -webkit-transform-style: preserve-3d;
+ -moz-transition: 1s;
+ -moz-transform-style: preserve-3d;
+ -o-transition: 1s;
+ -o-transform-style: preserve-3d;
+ -ms-transition: 1s;
+ -ms-transform-style: preserve-3d;
+ transition: 1s;
+ transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+ height: 312px;
+}
+
+.backside .card a {
+ font-size: 18px;
+ color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+ color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+ width: 120px;
+ height: 120px;
+ border-radius: 50%;
+}
+
+
+/* CSS for categories cards ends */
+
+.border-btn2{border:1px solid #00A8E2;color:#00A8E2;font:"Muli",sans-serif;background:none;-moz-user-select:none;padding:19px 69px;margin:0px;text-transform:uppercase;cursor:pointer;display:inline-block;font-size:14px;font-weight:500;letter-spacing:1px;margin-bottom:0;border-radius:5px;position:relative;transition:color 0.4s linear;position:relative;overflow:hidden;margin:0}
+@media (max-width: 767px){.border-btn2{padding:19px 30px}}
+.border-btn2::before{border:1px solid transparent;content:"";position:absolute;left:0;top:0;width:101%;height:101%;background:#00A8E2;z-index:-1;transition:transform 0.5s;transition-timing-function:ease;transform-origin:0 0;transition-timing-function:cubic-bezier(0.5, 1.6, 0.4, 0.7);transform:scaleY(0);border-radius:0px}
+.border-btn2:hover::before{transform:scaleY(1);border:2px solid transparent}.breadcrumb>.active{color:#fff}
