@@ -2,7 +2,12 @@ body{
  font-family: "Multi",sans-serif;
  font-weight: normal;
  font-style: normal;
+
 }
+
+
+
+
 
 
 .btn{background:#fff;-moz-user-select:none;text-transform:capitalize;color:#fff;cursor:pointer;display:inline-block;font-size:14px;font-weight:500;letter-spacing:1px;line-height:0;margin-bottom:0;padding:27px 44px;border-radius:0px;margin:10px;cursor:pointer;transition:color 0.4s linear;position:relative;z-index:1;border:0;overflow:hidden;margin:0}
@@ -17,9 +22,67 @@ body{
 
 }
 
+
+.hero_caption h1{
+ font-size:80px;
+ font-weight: 900;
+ margin-bottom: 78px;
+ color:#28395a;
+ line-height:1.2;
+ display:block;
+}
+
+
+
+
+form.search-box{box-shadow:0px 6px 29px 0px rgba(36,43,94,0.08);display:flex;flex-wrap:wrap;justify-content:space-between}form.search-box .input-form{width:45%;position:relative}@media (max-width: 767px){form.search-box .input-form{width:100%}}form.search-box .input-form input{height:70px;width:100%;color:#777777;font-size:18px;font-weight:400;padding:9px 33px 9px 32px;border:none;border-radius:0px;position:relative}@media (max-width: 767px){form.search-box .input-form input{margin-bottom:20px}}@media only screen and (min-width: 576px) and (max-width: 767px){form.search-box .input-form input{padding:9px 33px 9px 25px;margin-bottom:20px}}form.search-box .input-form input::placeholder{color:#616875}@media (max-width: 767px){form.search-box .input-form input::placeholder{font-size:13px}}form.search-box .input-form::before{position:absolute;content:'';width:1px;height:51px;background:#e0e4f8;right:22px;top:50%;z-index:1;transform:translateY(-50%)}@media only screen and (min-width: 576px) and (max-width: 767px){form.search-box .input-form::before{display:none}}@media (max-width: 767px){form.search-box .input-form::before{display:none}}form.search-box .select-form{width:34%}@media (max-width: 767px){form.search-box .select-form{width:100%}}form.search-box .select-form .nice-select{width:100%;height:70px;background:#fff;border-radius:0px;padding:11px 19px 11px 10px;color:#616875;line-height:54px;border:0}@media (max-width: 767px){form.search-box .select-form .nice-select{margin-bottom:20px;padding-left:25px}}@media only screen and (min-width: 576px) and (max-width: 767px){form.search-box .select-form .nice-select{margin-bottom:20px;padding-left:25px}}form.search-box .select-form .nice-select .list{width:100%}form.search-box .select-form .nice-select.open .list{width:100%;border-radius:0;border:0}form.search-box .select-form .nice-select::after{border-bottom:1px solid #a9b6cd;border-right:1px solid #a9b6cd;height:12px;width:12px;margin-top:-4px;right:29px}form.search-box .search-form{width:21%}@media (max-width: 767px){form.search-box .search-form{width:100%}}form.search-box .search-form a{width:100%;height:70px;background:#fb246a;font-size:20px;line-height:1;text-align:center;color:#fff;display:block;padding:15px;border-radius:0px;text-transform:capitalize;font-family:"Muli",sans-serif;letter-spacing:0.1em;line-height:1.2;line-height:38px;font-size:14px}
+
+.my-select{
+ width:100%;
+ height:70px;
+ background:#fff;
+ border-radius: 20px;
+ padding:11px 19px 11px 10px;
+ color:#616875;
+ line-height: 54px;
+ border:0;
+}
+
+.my-input{
+ height:70px;
+ width:100%;
+ color:#777777;
+ font-size:18px;
+ font-weight: 400;
+ border:none;
+}
+
+.my-btn{
+ width: 120%;
+ border: none;
+ border-radius: 1rem;
+ padding: 1.5%;
+ background: #dc3545;
+ font-weight: 600;
+ color: #fff;
+ cursor: pointer;
+}
+
+.top-hero{
+ background-image: url("../img/top-hero.png");
+}
+
+.myTitle {
+ font-size:48px;
+ padding-top:115px;
+}
+
+
+
 /* CSS for categories cards starts */
 
 .categories{
+ padding : 45px;
 background: #eee !important;
 }
 
@@ -123,3 +186,120 @@ background: #eee !important;
 @media (max-width: 767px){.border-btn2{padding:19px 30px}}
 .border-btn2::before{border:1px solid transparent;content:"";position:absolute;left:0;top:0;width:101%;height:101%;background:#00A8E2;z-index:-1;transition:transform 0.5s;transition-timing-function:ease;transform-origin:0 0;transition-timing-function:cubic-bezier(0.5, 1.6, 0.4, 0.7);transform:scaleY(0);border-radius:0px}
 .border-btn2:hover::before{transform:scaleY(1);border:2px solid transparent}.breadcrumb>.active{color:#fff}
+
+
+/* CSS for Login page starts */
+body{
+ background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+}
+.contact-form{
+ background: #fff;
+ margin-top: 10%;
+ margin-bottom: 2%;
+ width: 100%;
+}
+.contact-form .form-control{
+ border-radius:1rem;
+}
+.contact-image{
+ text-align: center;
+}
+.contact-image img{
+ border-radius: 6rem;
+ width: 11%;
+ margin-top: -3%;
+
+}
+.contact-form form{
+ padding: 7%;
+}
+.contact-form form .row{
+ margin-bottom: -7%;
+}
+.contact-form h3{
+ margin-bottom: 8%;
+ margin-top: -10%;
+ text-align: center;
+ color: #0062cc;
+}
+
+.contact-form h2{
+
+ margin-bottom: 1%;
+ color: #0062cc;
+}
+
+.contact-form .btnContact {
+ width: 50%;
+ border: none;
+ border-radius: 1rem;
+ padding: 1.5%;
+ background: #dc3545;
+ font-weight: 600;
+ color: #fff;
+ cursor: pointer;
+}
+.btnContactSubmit
+{
+ width: 50%;
+ border-radius: 1rem;
+ padding: 1.5%;
+ color: #fff;
+ background-color: #0062cc;
+ border: none;
+ cursor: pointer;
+}
+/* CSS for login page ends*/
+
+
+/* show jobs css starts */
+/* Job Listings */
+.job-listings {
+ padding: 0;
+ margin: 0;
+ border: 1px solid #eee;
+ border-radius: 7px;
+ overflow: hidden;
+ position: relative;
+ background: #fff; }
+.job-listings .badge {
+ color: #fff;
+ padding: 4px 10px; }
+@media (max-width: 991.98px) {
+ .job-listings .custom-width {
+  width: 100% !important; } }
+.job-listings .job-listing {
+ position: relative;
+ border-bottom: 1px solid #eee;
+ -webkit-transition: .3s all ease;
+ -o-transition: .3s all ease;
+ transition: .3s all ease; }
+.job-listings .job-listing:last-child {
+ border-bottom: none; }
+.job-listings .job-listing a {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ -webkit-transition: .3s all ease;
+ -o-transition: .3s all ease;
+ transition: .3s all ease; }
+.job-listings .job-listing a:hover {
+ border-left: 7px solid #00A8E2; }
+.job-listings .job-listing .job-listing-logo {
+ -webkit-box-flex: 0;
+ -ms-flex: 0 0 150px;
+ flex: 0 0 150px;
+ border-right: 1px solid #eee; }
+@media (max-width: 575.98px) {
+ .job-listings .job-listing .job-listing-logo {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%; } }
+.job-listings .job-listing-position h2 {
+ font-size: 1.2rem;
+ margin-bottom: 0; }
+.job-listings .job-listing-position strong {
+ color: #b3b3b3; }
+
+
+/* show jobs css ends */

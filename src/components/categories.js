@@ -5,11 +5,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 const Categories =()=>{
     return(
         <div className="categories">
-            <div className="row text-center">
-                <div className="col-xs-12 col-sm-6 col-md-12 p-4">
-                    <h1> this will show categories by cards</h1>
-                </div>
-            </div>
+
 
             <div className="container">
 
@@ -23,7 +19,7 @@ const Categories =()=>{
                                         <div className="card-body text-center">
                                             <p><img className=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image" /></p>
                                             <h4 className="card-title">Information Technology</h4>
-                                                <a class="btn btn-outline-primary"> <FontAwesomeIcon icon={faPlus} /> </a>
+                                                <a className="btn btn-outline-primary"> <FontAwesomeIcon icon={faPlus} /> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -308,7 +304,7 @@ const Categories =()=>{
 
                 </div>
 
-                <div className="row">
+                <div className="row p-4">
                     <div className="col-xs-12 col-sm-6 col-md-12 text-center">
                          Category Not Listed ?   <a className="btn border-btn2" href='#'>Browse other Sectors</a>
                     </div>

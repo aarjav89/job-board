@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import '../assets/css/style.css'
 
 const Header =()=> {
@@ -8,7 +9,9 @@ const Header =()=> {
 
 
                     <div className="col-lg-3 text-center">
-                        <a className="navbar-brand" href="#"><img src={require('../assets/img/logo.png')} /></a>
+                        <Link to="/">
+                            <img src={require('../assets/img/logo.png')} />
+                        </Link>
                     </div>
 
                     <div className="col-lg-6 text-center">
@@ -19,16 +22,16 @@ const Header =()=> {
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav">
                                 <li className="nav-item active">
-                                    <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                                    <Link to="/" className="nav-link">Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Find Jobs</a>
+                                    <Link to="/showJobs" className="nav-link"> Find Jobs</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">About Us</a>
+                                    <Link to="/about-us" className="nav-link"> About Us</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Contact Us</a>
+                                    <Link to="/contact-us" className="nav-link">Contact Us</Link>
                                 </li>
 
                             </ul>
@@ -37,7 +40,9 @@ const Header =()=> {
                     </div>
 
                     <div className="col-lg-3">
-                        <button className="btn head-btn2"> Login / Register </button>
+                       <Link to="/login">
+                           <button className="btn head-btn2"> Login / Register </button>
+                       </Link>
 
 
                     </div>
