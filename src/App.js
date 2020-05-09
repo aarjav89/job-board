@@ -18,6 +18,7 @@ import AboutUs from "./pages/aboutus";
 import ContactUs from "./pages/contactus";
 import NotFound from "./pages/404";
 import JobDetails from "./pages/jobdetails";
+import Register from "./pages/register"
 
 
 
@@ -32,6 +33,8 @@ function App() {
             <Route path="/" exact> <Home/> </Route>
 
             <Route path="/login" exact> <Login/> </Route>
+
+                <Route path="/register" exact> <Register/> </Route>
 
             <Route path="/showJobs" exact> <ShowJobs/> </Route>
 

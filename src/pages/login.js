@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 const Login=()=>{
     return(
@@ -18,28 +19,12 @@ const Login=()=>{
         <div className="row container text-center">
             <div className="col-md-6" style={{borderRight:'5px, solid, black'}}>
                 <form method="post">
-                <h3>Sign Up Form</h3>
-                    <div className="form-group">
-                        <input type="text" className="form-control" name="fname" placeholder="Your First Name"/>
+                <h3>No Account ? Lets register you first...</h3>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <Link to="/register" className="btnContact"> Register  </Link>
+                        </div>
                     </div>
-
-                    <div className="form-group">
-                        <input type="text" className="form-control" name="lname" placeholder="Your Last Name Name"/>
-                    </div>
-
-                    <div className="form-group">
-                        <input type="email" className="form-control" name="reg_email" placeholder="Your Email address"/>
-                    </div>
-
-                    <div className="form-group">
-                        <input type="password" className="form-control" name="reg_pass" placeholder="Your Password"/>
-                    </div>
-
-                    <div className="form-group">
-                        <input type="password" className="form-control" name="reg_conf_pass" placeholder="Your Confirm Password"/>
-                    </div>
-
-                    <input type="submit" name="btnReg" className="btnContact" value="Register"/>
                 </form>
             </div>
 
