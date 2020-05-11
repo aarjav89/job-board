@@ -1,6 +1,53 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
+import axios from 'axios'
 import Jobcard from '../components/jobcard'
+
+
 const ShowJobs=()=>{
+
+
+    const [jobsList, editJobs] = useState([])
+    const[isFetched, editIsFetched ] = useState(false);
+
+    useEffect( () => {
+        const fetchJobs= async ()=>{
+
+            try{
+                const response = await axios.get('http://localhost:5000/api/jobs')
+
+                console.log("response is "+ response)
+                editJobs(response.data)
+                editIsFetched(true)
+
+            }catch (e) {
+                console.log(e)
+            }
+        }
+        fetchJobs()
+    },[]);
+
+    const LoadComponent =()=>{
+
+        if(isFetched){
+
+            return (
+                <Jobcard jobs={jobsList.jobs}/>
+
+            )
+        }else  return (
+
+            <div>
+                <img src="https://media.giphy.com/media/11FuEnXyGsXFba/giphy.gif" height="200"/>
+                <h3>Loading data, please wait</h3>
+            </div>
+        )
+    }
+
+
+
+
+
+
     return(
         <div>
 
@@ -30,7 +77,7 @@ const ShowJobs=()=>{
             </div>
 
             <div className="container contact-form" style={{marginTop:'1%',paddingBottom:'3%'}}>
-                <Jobcard/>
+                <LoadComponent/>
             </div>
 
 

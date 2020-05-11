@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faList, faEdit, faCheckCircle, faGraduationCap, faHandHoldingUsd} from '@fortawesome/free-solid-svg-icons'
 import AppliedModal from "./AppliedModal";

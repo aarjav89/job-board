@@ -17,7 +17,7 @@ const Categories =()=>{
                                 <div className="frontside">
                                     <div className="card">
                                         <div className="card-body text-center">
-                                            <p><img className=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image" /></p>
+                                            <p><img className="img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="" /></p>
                                             <h4 className="card-title">Information Technology</h4>
                                                 <a className="btn btn-outline-primary"> <FontAwesomeIcon icon={faPlus} /> </a>
                                         </div>
@@ -46,9 +46,9 @@ const Categories =()=>{
                                 <div className="frontside">
                                     <div className="card">
                                         <div className="card-body text-center">
-                                            <p><img className=" img-fluid"
+                                            <p><img className="img-fluid"
                                                     src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png"
-                                                    alt="card image"/></p>
+                                                    alt=""/></p>
                                             <h4 className="card-title">Sales / <br/> Marketing</h4>
                                             <a className="btn btn-outline-primary"> <FontAwesomeIcon icon={faPlus}/>
                                             </a>
@@ -84,7 +84,7 @@ const Categories =()=>{
                                         <div className="card-body text-center">
                                             <p><img className=" img-fluid"
                                                     src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png"
-                                                    alt="card image"/></p>
+                                                    alt=""/></p>
                                             <br/>
                                             <h4 className="card-title">Construction</h4>
                                             <a className="btn btn-outline-primary"> <FontAwesomeIcon icon={faPlus}/>
@@ -121,7 +121,7 @@ const Categories =()=>{
                                         <div className="card-body text-center">
                                             <p><img className=" img-fluid"
                                                     src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png"
-                                                    alt="card image"/></p>
+                                                    alt=""/></p>
                                             <br/>
                                             <h4 className="card-title">Finance</h4>
                                             <a className="btn btn-outline-primary"> <FontAwesomeIcon icon={faPlus}/>
@@ -163,7 +163,7 @@ const Categories =()=>{
                                         <div className="card-body text-center">
                                             <p><img className=" img-fluid"
                                                     src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png"
-                                                    alt="card image"/></p>
+                                                    alt=""/></p>
 
                                             <br/>
                                             <h4 className="card-title">Real Estate</h4>
@@ -201,7 +201,7 @@ const Categories =()=>{
                                         <div className="card-body text-center">
                                             <p><img className=" img-fluid"
                                                     src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png"
-                                                    alt="card image"/></p>
+                                                    alt=""/></p>
                                             <h4 className="card-title">Sales / <br/> Marketing</h4>
                                             <a className="btn btn-outline-primary"> <FontAwesomeIcon icon={faPlus}/>
                                             </a>
@@ -237,7 +237,7 @@ const Categories =()=>{
                                         <div className="card-body text-center">
                                             <p><img className=" img-fluid"
                                                     src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png"
-                                                    alt="card image"/></p>
+                                                    alt=""/></p>
                                             <h4 className="card-title">Information Technology</h4>
                                             <a className="btn btn-outline-primary"> <FontAwesomeIcon icon={faPlus}/>
                                             </a>
@@ -273,7 +273,7 @@ const Categories =()=>{
                                         <div className="card-body text-center">
                                             <p><img className=" img-fluid"
                                                     src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png"
-                                                    alt="card image"/></p>
+                                                    alt=""/></p>
                                             <h4 className="card-title">Information Technology</h4>
                                             <a className="btn btn-outline-primary"> <FontAwesomeIcon icon={faPlus}/>
                                             </a>

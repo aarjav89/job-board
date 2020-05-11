@@ -167,11 +167,15 @@ const Register=()=>{
                     </div>
 
                     <div className="form-group">
-                        <input type="text" className="form-control" placeholder="Institution Name" name="institution1" ref={register} />
+                        <input type="text" className="form-control" placeholder="Institute Name" name="institution1" ref={register} />
                     </div>
 
                     <div className="form-group">
-                        <select className="form-control" name="degree_awarded" ref={register}>
+                        <input type="text" placeholder="Institute Location" className="form-control" name="location1" ref={register} />
+                    </div>
+
+                    <div className="form-group">
+                        <select className="form-control" name="degree_awarded1" ref={register}>
                             <option value="select">-- Select Degree Awarded --</option>
                             <option value="Certificate">Certificate</option>
                             <option value="Diploma">Diploma</option>

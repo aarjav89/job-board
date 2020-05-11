@@ -10,7 +10,7 @@ const Header =()=> {
 
                     <div className="col-lg-3 text-center">
                         <Link to="/">
-                            <img src={require('../assets/img/logo.png')} />
+                            <img src={require('../assets/img/logo.png')} alt="" />
                         </Link>
                     </div>
 

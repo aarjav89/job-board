@@ -1,7 +1,55 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom"
+import {useForm} from 'react-hook-form'
+import axios from 'axios'
+
+
+
+
 
 const Login=()=>{
+
+    const { register, handleSubmit, errors }  = useForm()
+    const [errorMessage, editErrorMessage] = useState(false)
+
+    const onSubmit= async(formData,event)=>{
+        event.preventDefault();
+
+        try{
+            await axios.post('http://localhost:5000/api/users/authenticate',formData).then(response => {
+                if(response.status === 200){
+                    this.props.history.push('/');
+                }
+                else{
+                    const error = new Error(response.error)
+                    throw error
+                }
+            })
+
+        }
+        catch(err) {
+            console.error(err);
+            editErrorMessage(true);
+        };
+
+    }
+
+    const ShowErrorMessage=()=>{
+        if(errorMessage){
+            return(
+                <div className="alert alert-danger">
+                    <strong>Whoops!</strong> Error logging you in, Please try again later.
+                </div>
+            )
+        }
+
+        return "";
+
+    }
+
+
+
+
     return(
         <div>
             <div className="top-hero" style={{height:'300px'}}>
@@ -29,14 +77,17 @@ const Login=()=>{
             </div>
 
             <div className="col-md-6">
-                <form action="post">
+                <ShowErrorMessage/>
+                <form method="post" onSubmit={handleSubmit(onSubmit)}>
                 <h3> Login form</h3>
                     <div className="form-group">
-                        <input type="email" className="form-control" name="login_email" placeholder="Your Email address"/>
+                        <input type="email" className="form-control" name="email" placeholder="Your Email address" ref={register({required:true})}/>
+                        {errors.email && <p className="error"><strong>Please enter a value for email</strong></p>}
                     </div>
 
                     <div className="form-group">
-                        <input type="password" className="form-control" name="login_pass" placeholder="Your Password"/>
+                        <input type="password" className="form-control" name="password" ref={register({required:true})} placeholder="Your Password"/>
+                        {errors.password && <p className="error"><strong>Please enter a value for password</strong></p>}
                     </div>
 
                     <input type="submit" name="btnReg" className="btnContact" value="Login"/>
