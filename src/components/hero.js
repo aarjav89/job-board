@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import '../assets/css/style.css'
 
 
@@ -40,7 +41,7 @@ const Hero = () =>{
                         </div>
                         <div className="row pl-5 pt-3 text-center">
                             <div className="col-12">
-                                <a href="#" className="my-btn">Find Job</a>
+                                <Link to="/showJobs" className="my-btn">Find Job</Link>
                             </div>
 
                         </div>
