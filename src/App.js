@@ -46,7 +46,7 @@ function App() {
 
             <Route path="/404" exact> <NotFound/> </Route>
 
-                <Route path="/jobdetails" exact> <JobDetails/> </Route>
+                <Route path="/jobdetails/:id/show" exact> <JobDetails/> </Route>
 
             <Redirect to="/404" />
             </Switch>

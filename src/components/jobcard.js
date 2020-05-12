@@ -27,9 +27,9 @@ const Jobcard = props => {
 
             {props.jobs.map( job => {
                 return(
-                        <ul className="job-listings mb-5">
-                            <li className="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                                <Link to="/jobdetails">
+                        <ul className="job-listings mb-5" key={job._id}>
+                            <li className="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center" >
+                                <Link to={`/jobdetails/${job._id}/show`}>
 
                                 </Link>
                                 <div className="job-listing-logo">
