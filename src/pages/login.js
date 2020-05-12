@@ -10,15 +10,21 @@ import axios from 'axios'
 const Login=()=>{
 
     const { register, handleSubmit, errors }  = useForm()
+    const [ showMessage, editShowMessage ] = useState(false)
     const [errorMessage, editErrorMessage] = useState(false)
 
     const onSubmit= async(formData,event)=>{
+
+        editErrorMessage(false);
+        editShowMessage(false);
         event.preventDefault();
 
         try{
             await axios.post('http://localhost:5000/api/users/authenticate',formData).then(response => {
+
                 if(response.status === 200){
-                    this.props.history.push('/');
+                    editShowMessage(true);
+                    //this.props.history.push('/');
                 }
                 else{
                     const error = new Error(response.error)
@@ -39,6 +45,20 @@ const Login=()=>{
             return(
                 <div className="alert alert-danger">
                     <strong>Whoops!</strong> Error logging you in, Please try again later.
+                </div>
+            )
+        }
+
+        return "";
+
+    }
+
+
+    const ShowMessage=()=>{
+        if(showMessage){
+            return(
+                <div className="alert alert-success">
+                    <strong>Yippe!</strong> Authentication Successful. Redirecting...
                 </div>
             )
         }
@@ -77,7 +97,7 @@ const Login=()=>{
             </div>
 
             <div className="col-md-6">
-                <ShowErrorMessage/>
+                <ShowErrorMessage/><ShowMessage/>
                 <form method="post" onSubmit={handleSubmit(onSubmit)}>
                 <h3> Login form</h3>
                     <div className="form-group">

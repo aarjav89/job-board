@@ -59,7 +59,7 @@ const ShowJobs=()=>{
                 <form action="post" style={{padding:'0.5%'}}>
                 <div className="row text-center">
 
-                        <div class="col-md-4">
+                        <div className="col-md-4">
 
                             <input type="text" name="position" placeholder="position" className="form-control"/>
                         </div>

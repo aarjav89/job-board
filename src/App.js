@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom'
 
 
@@ -20,7 +20,7 @@ import NotFound from "./pages/404";
 import JobDetails from "./pages/jobdetails";
 import Register from "./pages/register"
 
-
+// const [isLoggedIn, editIsLoggedIn] = useState(false);
 
 
 function App() {
@@ -56,4 +56,6 @@ function App() {
   );
 }
 
+
 export default App;
+

@@ -1,6 +1,4 @@
 import React, {useState} from "react";
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
 import { useForm } from 'react-hook-form';
 import axios from "axios";
 
@@ -8,6 +6,7 @@ const PostJob=()=>{
 
     const { register, handleSubmit, errors } = useForm();
     const [errorMessage, editErrorMessage] = useState(false)
+    const [showMessage, editShowMessage] = useState(false)
 
     const onSubmit=  async (formData,event)=> {
         editErrorMessage(false)
@@ -17,6 +16,7 @@ const PostJob=()=>{
         try {
 
             await axios.post('http://localhost:5000/api/jobs/register', formData)
+            editShowMessage(true)
 
         } catch (e) {
             editErrorMessage(true)
@@ -29,6 +29,19 @@ const PostJob=()=>{
             return(
                 <div className="alert alert-danger">
                     <strong>Whoops!</strong> Something went wrong, Please try again later.
+                </div>
+            )
+        }
+
+        return "";
+
+    }
+
+    const ShowMessage=()=>{
+        if(showMessage){
+            return(
+                <div className="alert alert-success">
+                    <strong>Yippe !</strong> Job Added Successfully.
                 </div>
             )
         }
@@ -55,6 +68,7 @@ const PostJob=()=>{
 
             <div className="container contact-form" style={{marginTop:'3%'}}>
                 <ShowErrorMessage/>
+                <ShowMessage/>
 
                     <div className="row">
                         <div className="col-lg-12 mb-2">
@@ -68,12 +82,12 @@ const PostJob=()=>{
 
                            <div className="form-group">
                             <label> Job Title </label><br/>
-                            <input type="text" name="job_title" className="form-control"/>
+                            <input type="text" name="job_title" className="form-control" ref={register({required: true})}/>
                            </div>
 
                             <div className="form-group">
                                 <label> Location </label><br/>
-                                <input type="text" name="location" className="form-control"/>
+                                <input type="text" name="location" className="form-control" ref={register({required: true})}/>
                             </div>
 
 
@@ -87,7 +101,7 @@ const PostJob=()=>{
                                 {/*    style={{ width: 300 }}*/}
                                 {/*    renderInput={(params) => <TextField {...params} label="Select Location" variant="outlined" />}*/}
                                 {/*/>*/}
-                                <select name="province" className="form-control">
+                                <select name="province" className="form-control" ref={register({required: true})}>
                                     <option value="Ontario">Ontario</option>
                                     <option value="Alberta">Alberta</option>
                                     <option value="British Columbia">British Columbia</option>
